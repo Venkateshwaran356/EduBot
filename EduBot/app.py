@@ -9,8 +9,6 @@ from dotenv import load_dotenv
 load_dotenv()
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
 class Message(BaseModel):
     message: str
 
